@@ -149,9 +149,7 @@ class MainActivity : AppCompatActivity() {
 
         /* Le añadimos funcionalidad al boton decimal */
         botonDecimal.setOnClickListener {
-            if(numeroActual.indexOf(".", 0) >= 0){
-                numeroActual.replace(".", "");
-            }
+            numeroActual = numeroActual.replace(".", "");
             numeroActual += ".";
             resultado.text = numeroActual;
         }
@@ -172,6 +170,8 @@ class MainActivity : AppCompatActivity() {
             else{
                 numeroActual == "";
             }
+            resultado.text = numeroActual
+            historial.text = operacionActual.estado()
         }
 
         /* Le añadimos funcionalidad al boton igual */

@@ -1,4 +1,4 @@
-package com.example.calculadora
+package com.example.pm_01_pbfp
 
 class Operacion() {
     //Ponemos vacias todas las variables
