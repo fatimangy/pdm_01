@@ -11,11 +11,11 @@ class Operacion() {
     }
 
     fun setSigno(Signo:String?){
-        signo = " $Signo ";
+        signo = Signo;
     }
 
-    fun setN2(N1:Float?){
-        n1 = N1;
+    fun setN2(N2:Float?){
+        n2 = N2;
     }
 
     fun getN1():Float?{
@@ -61,30 +61,28 @@ class Operacion() {
     }
 
     fun resultado():Float{
-        var solucion:Float;
         when(signo){
-            "+" -> {solucion = n1!! + n2!!}
-            "-" -> {solucion = n1!! - n2!!}
-            "*" -> {solucion = n1!! * n2!!}
-            "/" -> {solucion = n1!! / n2!!}
-            else -> {solucion = "0".toFloat()}
+            "+" -> {return n1!! + n2!!}
+            "-" -> {return n1!! - n2!!}
+            "*" -> {return n1!! * n2!!}
+            "/" -> {return n1!! / n2!!}
         }
-        return solucion;
+        return "0.15".toFloat();
     }
 
     fun estado(): String{
         //Preparamos el string para el formato
-        var estado = "";
+        var estado: String = "";
 
         //Vemos por que paso vamos
         if(n1 != null){
-            estado += n1;
+            estado += n1.toString();
         }
         if(signo != null){
             estado += signo;
         }
         if(n2 != null){
-            estado += n2;
+            estado += n2.toString();
         }
 
         return estado;
